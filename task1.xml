@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<students>
+	<student>
+		<name> Snehita </name>
+		<id> 111 </id>
+		<branch> CSE </branch>
+		<cgpa> 9 </cgpa>
+	</student>
+
+	<student>
+		<name> Priya </name>
+		<id> 222 </id>
+		<branch> ECE </branch>
+		<cgpa> 8.4 </cgpa>
+	</student>
+
+	<student>
+		<name> Ramya </name>
+		<id> 333 </id>
+		<branch> EEE </branch>
+		<cgpa> 9.5 </cgpa>
+	</student>
+
+	<student>
+		<name> Deepika </name>
+		<id> 444 </id>
+		<branch> CSE </branch>
+		<cgpa> 8 </cgpa>
+	</student>
+
+	<student>
+		<name> Mary </name>
+		<id> 555 </id>
+		<branch> MECH </branch>
+		<cgpa> 7.9 </cgpa>
+	</student>
+
+</students>
