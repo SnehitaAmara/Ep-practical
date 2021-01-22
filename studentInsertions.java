@@ -24,7 +24,7 @@ public class studentInsertions {
 	
 	public int studentDelete(studentBean student) throws ClassNotFoundException , SQLException {
 		Connection con =DBUtil.DBConnection();
-		PreparedStatement ps = con.prepareStatement("delete from studentDB where regno=?");
+		PreparedStatement ps = con.prepareStatement("delete from studentDB where id=?");
 		ps.setInt(1,student.getRegno());
 		int b=ps.executeUpdate();
 		con.close();
@@ -33,7 +33,7 @@ public class studentInsertions {
 	
 	public int studentUpdate(studentBean student) throws ClassNotFoundException , SQLException {
 		Connection con =DBUtil.DBConnection();
-		PreparedStatement ps = con.prepareStatement("update studentDB set name=? where regno=?");
+		PreparedStatement ps = con.prepareStatement("update studentDB set name=? where id=?");
 		ps.setInt(1,student.getRegno());
 		ps.setString(2,student.getName());
 		int c=ps.executeUpdate();
@@ -43,11 +43,12 @@ public class studentInsertions {
 	
 	public void studentDisplay(studentBean student) throws ClassNotFoundException , SQLException {
 		Connection con =DBUtil.DBConnection();
-		PreparedStatement ps = con.prepareStatement("select * from studentDB where regno=?");
+		PreparedStatement ps = con.prepareStatement("select * from studentDB where id=?");
 		ResultSet rs = ps.executeQuery();
 		while(rs.next()) {
 			System.out.println(rs.getInt(1) + " "+rs.getString(2)+" "+rs.getString(3));
 		}
+		rs.close();
 	}
 	
 	
